@@ -1,8 +1,13 @@
+name: My Workflow
+
+on: [push]
+
 jobs:
-  build:
+  codeball_review:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
       - name: Codeball AI Code Review
         uses: sturdy-dev/codeball-action@v2.6.0
-
-
